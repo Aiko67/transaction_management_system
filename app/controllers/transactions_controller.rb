@@ -23,6 +23,7 @@ class TransactionsController < ApplicationController
     end
 
     digits_only = params[:account_number].gsub(/\D/, "")
+
     unless digits_only.length == 12
       flash[:error] = "Account number must have exactly 12 digits (e.g., 1234-5678-9012)."
       return render :new, status: :unprocessable_entity
@@ -37,6 +38,7 @@ class TransactionsController < ApplicationController
       params[:amount],
       statuses.sample
     ]
+
     File.open(CSV_FILE, "a") do |f|
       f.write("\n") unless File.zero?(CSV_FILE) || File.read(CSV_FILE)[-1] == "\n"
     end

@@ -29,8 +29,24 @@ You should see something like: `Rails 8.0.2`.
 
 ### 2. Download or Clone the Project
 
-- Download the project folder from your source, or  
-- Use Git to clone the project:
+- Download the project folder from your source
+
+1. Go to your GitHub repo page:
+https://github.com/Aiko67/transaction_management_system
+
+2. Find the green “Code” button near the top right, above the file list.
+
+3. Click the “Code” button, a dropdown will appear.
+
+4. Click “Download ZIP” at the bottom of the dropdown.
+
+5. This downloads a .zip file of your entire repo to your computer.
+
+6. Extract/unzip the downloaded file anywhere on your computer.
+
+7. Open your terminal/command prompt and cd into that extracted folder.
+
+- Use Git to clone the project. Open your Terminal or Command Prompt and run this code:
 
 git clone https://github.com/Aiko67/transaction_management_system.git
 
