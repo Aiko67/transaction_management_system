@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Transaction Management System" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <h1>Transaction Manager</h1>
+        <a href="/" class="nav-link">Home</a>
+        <a href="/transactions/new" class="nav-link">Add Transaction</a>
+      </div>
+    </nav>
+
+    <div class="content-container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

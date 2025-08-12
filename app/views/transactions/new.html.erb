@@ -1,0 +1,38 @@
+<h2>New Transaction</h2>
+
+<% if flash[:error] %>
+  <div style="color: red;"><%= flash[:error] %></div>
+<% end %>
+
+<%= form_with url: transactions_path, method: :post do |form| %>
+  <div>
+    <%= form.label :transaction_date %>
+    <%= form.date_field :transaction_date, value: params[:transaction_date] %>
+  </div>
+  <br>
+  <div>
+    <%= form.label :account_number %>
+    <%= form.text_field :account_number, 
+        maxlength: 12, 
+        pattern: "\\d{12}", 
+        placeholder: "Enter 12 digits", 
+        required: true,
+        size: 20 %>
+  </div>
+  <br>
+  <div>
+    <%= form.label :account_holder_name %>
+    <%= form.text_field :account_holder_name, value: params[:account_holder_name] %>
+  </div>
+  <br>
+  <div>
+    <%= form.label :amount %>
+    <%= form.number_field :amount, step: "0.01", value: params[:amount],
+        min: 0.01,
+        step: "0.01",
+        placeholder: "0.00",
+        required: true %>
+  </div>
+  <br>
+  <%= form.submit "Create Transaction" %>
+<% end %>

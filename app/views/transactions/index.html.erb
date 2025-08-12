@@ -1,0 +1,35 @@
+<h1>All Transactions</h1>
+
+<% if flash[:error] %>
+  <div style="color: red;"><%= flash[:error] %></div>
+<% end %>
+
+<% if flash[:success] %>
+  <div style="color: green;"><%= flash[:success] %></div>
+<% end %>
+<br>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Date</th>
+    <th>Account Number</th>
+    <th>Account Holder Name</th>
+    <th>Amount</th>
+    <th>Status</th>
+  </tr>
+  <% @transactions.each do |t| %>
+    <tr>
+      <td><%= t["Transaction Date"] %></td>
+      <td><%= t["Account Number"] %></td>
+      <td><%= t["Account Holder Name"] %></td>
+      <td><%= t["Amount"] %></td>
+      <td style="color:
+        <%= case t["Status"]
+            when "Pending" then "orange"
+            when "Settled" then "green"
+            when "Failed"  then "red"
+        end %>">
+        <%= t["Status"] %>
+      </td>
+    </tr>
+  <% end %>
+</table>
