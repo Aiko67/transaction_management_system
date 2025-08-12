@@ -1,14 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+  background: #cce0ff;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: #1a1a1a;
 }
 
 /* Navbar styling */
 .navbar {
-  background-color: #2c3e50;
+  background-color: #1a3d7c;
   padding: 1rem;
   color: white;
 }
@@ -26,23 +26,24 @@ body {
 }
 
 .nav-link {
-  color: white;
+  color: #cce0ff;
   text-decoration: none;
   font-weight: bold;
 }
 
 .nav-link:hover {
   text-decoration: underline;
+  color: #e0eaff;
 }
 
 /* Content box */
 .content-container {
   max-width: 900px;
   margin: 2rem auto;
-  background: white;
+  background: #e6f0ff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(26, 61, 124, 0.2);
 }
 
 /* Table styling */
@@ -53,22 +54,22 @@ table {
 }
 
 table, th, td {
-  border: 1px solid #ddd;
+  border: 1px solid #aac6ff;
 }
 
 th, td {
   padding: 0.75rem;
-  text-align: left;
+  text-align: center;
 }
 
 th {
-  background-color: #34495e;
+  background-color: #335ea8;
   color: white;
 }
 
 /* Status colors */
 .status-pending {
-  color: #f39c12;
+  color: #d4d400;;
 }
 
 .status-settled {
@@ -80,15 +81,41 @@ th {
 }
 
 /* Buttons */
-button {
+.btn-submit {
   padding: 0.5rem 1rem;
-  background: #2980b9;
+  background: #1a3d7c;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background: #3498db;
+.btn-submit:hover {
+  background: #335ea8;
+}
+
+/* Table */
+.transactions-table {
+  border-collapse: collapse;
+  border: 1px solid #aac6ff;
+  padding: 5px;
+}
+
+.transactions-table th,
+.transactions-table td {
+  border: 1px solid #aac6ff;
+  padding: 5px;
+  text-align: center; 
+}
+
+/* Flash messages */
+.flash-error {
+  color: #d93025;
+  margin-bottom: 1rem;
+}
+
+.flash-success {
+  color: green;
+  margin-bottom: 1rem;
 }

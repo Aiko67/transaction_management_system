@@ -118,7 +118,7 @@ You will see the list of transactions.
 
 - Click **Add Transaction** to fill the form.  
 - Enter all required fields.  
-- Account Number must have 12 digits and be formatted like `1234-5678-9012`.  
+- Account Number must have 12 digits and be formatted like `1234-5678-9012`. If Account Number already exists in previous transactions, the account holder name must match.
 - Amount must be a positive number with two decimals.  
 - Submit to add the transaction.
 
